@@ -13,7 +13,7 @@ export default function Footer() {
     <footer className="bg-card text-foreground/60">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-6 md:flex-row md:px-6">
         <p className="text-sm">
-          &copy; {currentYear} John Apex. All rights reserved.
+          &copy; {currentYear} Akshaya Shri. All rights reserved.
         </p>
         <nav className="flex gap-4 text-sm">
           {footerLinks.map((link) => (

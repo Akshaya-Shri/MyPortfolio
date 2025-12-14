@@ -62,7 +62,7 @@ export default function ContactSection() {
                     <CardTitle>Contact Info</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                    <p><strong>Email:</strong> john.apex@email.com</p>
+                    <p><strong>Email:</strong> akshaya.shri@email.com</p>
                     <p><strong>Location:</strong> San Francisco, CA</p>
                 </CardContent>
             </Card>
