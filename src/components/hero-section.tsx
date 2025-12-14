@@ -11,7 +11,7 @@ export default function HeroSection() {
           Akshaya Shri
         </h1>
         <p className="mt-4 text-lg text-primary sm:text-xl md:text-2xl">
-          Senior Flutter Developer
+          AI-Powered App Engineer
         </p>
         <p className="mx-auto mt-6 max-w-[700px] text-foreground/80 md:text-xl">
           Crafting beautiful and performant mobile experiences with a passion for clean code and user-centric design.
