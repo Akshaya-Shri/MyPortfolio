@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { CheckCircle } from 'lucide-react';
 
 const strengths = [
@@ -12,23 +11,18 @@ const strengths = [
 ];
 
 export default function AboutMeSection() {
-  const profileImage = PlaceHolderImages.find((img) => img.id === 'profile');
-
   return (
     <section id="about" className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            {profileImage && (
-              <Image
-                src={profileImage.imageUrl}
-                alt={profileImage.description}
-                data-ai-hint={profileImage.imageHint}
-                width={400}
-                height={400}
-                className="mx-auto aspect-square rounded-full object-cover shadow-lg glow"
-              />
-            )}
+            <Image
+              src="/profile.jpg"
+              alt="Akshaya Shri"
+              width={400}
+              height={400}
+              className="mx-auto aspect-square rounded-full object-cover shadow-lg glow"
+            />
           </div>
           <div className="flex flex-col justify-center lg:col-span-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">About Me</h2>
