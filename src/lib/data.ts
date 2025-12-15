@@ -64,13 +64,6 @@ export const initialProjects = [
     githubUrl: '#',
     liveUrl: '#',
   },
-  {
-    title: 'Portfolio Website',
-    description: 'This very portfolio, built with Next.js and Tailwind CSS, showcasing my skills and projects in a sleek, modern design.',
-    techStack: 'Next.js, React, Tailwind CSS, TypeScript',
-    githubUrl: '#',
-    liveUrl: '#',
-  },
 ];
 
 export const experiences = [
