@@ -72,13 +72,7 @@ export const internships = [
     company: 'Tech Innovations',
     date: 'Summer 2023',
     description: 'Contributed to the development of a new feature for the company\'s flagship product. Worked with a team of developers to design, implement, and test the feature.',
-  },
-  {
-    title: 'Mobile App Developer Intern',
-    company: 'Creative Solutions',
-    date: 'Summer 2022',
-    description: 'Assisted in the development of a cross-platform mobile app using Flutter. Gained experience in UI/UX design and mobile development best practices.',
-  },
+  }
 ];
 
 export const education = [

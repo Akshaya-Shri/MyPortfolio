@@ -36,7 +36,7 @@ export default function ExperienceSection() {
             My Journey
           </h2>
           <p className="mt-4 max-w-[700px] text-foreground/80 md:text-xl">
-            A timeline of my internship experience and academic background.
+            A timeline of my internship and academic background.
           </p>
         </div>
 
@@ -44,7 +44,7 @@ export default function ExperienceSection() {
           <div>
             <h3 className="mb-8 text-2xl font-semibold flex items-center gap-3">
               <Briefcase className="w-6 h-6 text-accent"/>
-              Internship Experience
+              Internship
             </h3>
             <div className="relative">
               {internships.map((exp, index) => (
