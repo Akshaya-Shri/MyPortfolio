@@ -68,10 +68,10 @@ export const initialProjects = [
 
 export const internships = [
   {
-    title: 'Software Engineer Intern',
-    company: 'Tech Innovations',
-    date: 'Summer 2023',
-    description: 'Contributed to the development of a new feature for the company\'s flagship product. Worked with a team of developers to design, implement, and test the feature.',
+    title: 'Web Development Intern',
+    company: 'Innovative Solutions',
+    date: '15-Day Internship',
+    description: 'Completed a short-term, intensive web development internship. Gained hands-on experience with modern web technologies and contributed to a real-world project.',
   }
 ];
 
