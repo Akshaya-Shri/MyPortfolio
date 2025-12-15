@@ -81,4 +81,14 @@ export const education = [
       institution: 'Nadar Saraswathi College of Engineering and Technology',
       date: '2023 - 2027'
     },
+    {
+      title: 'HSC',
+      institution: 'Government Girls Higher Secondary School - Periyakulam',
+      date: '2022-2023'
+    },
+    {
+      title: 'SSLC',
+      institution: 'Government Girls Higher Secondary School - Periyakulam',
+      date: '2020-2021'
+    }
   ];
