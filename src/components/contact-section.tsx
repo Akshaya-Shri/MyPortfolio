@@ -10,7 +10,7 @@ import { useToast } from '@/hooks/use-toast';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/Akshaya-Shri', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/akshaya-k-9a46772a3', label: 'LinkedIn' },
 ];
 
 export default function ContactSection() {
