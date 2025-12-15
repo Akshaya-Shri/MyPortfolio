@@ -69,7 +69,7 @@ export const initialProjects = [
 export const internships = [
   {
     title: 'Web Development Intern',
-    company: 'Innovative Solutions',
+    company: 'NearLook Mart Pvt Ltd. - Theni',
     date: '15-Day Internship',
     description: 'Completed a short-term, intensive web development internship. Gained hands-on experience with modern web technologies and contributed to a real-world project.',
   }
