@@ -37,6 +37,13 @@ export const skills = [
 
 export const initialProjects = [
   {
+    title: 'ExpenseWise',
+    description: 'ExpenseWise is an AI-powered expense tracking app to manage your finances with smart insights. The app provides intelligent expense categorization and detects unusual spending patterns to help you stay on top of your budget.',
+    techStack: 'Next.js, React, ShadCN UI, Tailwind CSS, Genkit',
+    githubUrl: '#',
+    liveUrl: '#',
+  },
+  {
     title: 'GeoTracker',
     description: "GeoTracker is a real-time location tracking application that can find a user's current coordinates or geocode a location by name.",
     techStack: 'Next.js, React, ShadCN UI, Tailwind CSS',
