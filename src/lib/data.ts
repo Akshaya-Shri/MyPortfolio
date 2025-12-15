@@ -65,20 +65,6 @@ export const initialProjects = [
     liveUrl: '#',
   },
   {
-    title: 'E-commerce App',
-    description: 'A feature-rich mobile e-commerce platform built with Flutter and Firebase, providing a seamless shopping experience.',
-    techStack: 'Flutter, Dart, Firebase, Bloc',
-    githubUrl: '#',
-    liveUrl: '#',
-  },
-  {
-    title: 'Task Management App',
-    description: 'A productivity app to help users organize tasks, set deadlines, and track progress, with cloud sync across devices.',
-    techStack: 'Flutter, Dart, Firebase Auth, Firestore',
-    githubUrl: '#',
-    liveUrl: '#',
-  },
-  {
     title: 'Portfolio Website',
     description: 'This very portfolio, built with Next.js and Tailwind CSS, showcasing my skills and projects in a sleek, modern design.',
     techStack: 'Next.js, React, Tailwind CSS, TypeScript',
