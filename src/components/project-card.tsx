@@ -19,7 +19,7 @@ export function ProjectCard({ title, description, techStack, githubUrl, liveUrl 
     <Card className="flex h-full flex-col overflow-hidden transition-transform duration-300 hover:scale-105 hover:shadow-lg hover:shadow-primary/20">
       <CardHeader>
         <CardTitle>{title}</CardTitle>
-        <CardDescription className="h-12">{description}</CardDescription>
+        <CardDescription className="min-h-[4.5rem]">{description}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
         <div className="flex flex-wrap gap-2">
@@ -28,7 +28,7 @@ export function ProjectCard({ title, description, techStack, githubUrl, liveUrl 
           ))}
         </div>
       </CardContent>
-      <CardFooter className="flex justify-end gap-2 bg-card/50 p-4">
+      <CardFooter className="flex justify-end gap-2 bg-card/50 p-4 mt-auto">
         <Button asChild variant="ghost" size="icon">
           <Link href={githubUrl} target="_blank" aria-label={`GitHub for ${title}`}>
             <Github className="h-5 w-5" />

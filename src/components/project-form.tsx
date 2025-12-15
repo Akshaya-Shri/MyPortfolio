@@ -93,7 +93,7 @@ export function ProjectForm({ onProjectAdd, setOpen }: ProjectFormProps) {
             <FormItem>
               <FormLabel>Tech Stack</FormLabel>
               <FormControl>
-                <Input placeholder="Flutter, Firebase, Dart" {...field} />
+                <Textarea placeholder="Next.js, React, Tailwind CSS, Firebase, Genkit" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
