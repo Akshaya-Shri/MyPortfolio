@@ -37,6 +37,13 @@ export const skills = [
 
 export const initialProjects = [
   {
+    title: 'CampusConnect',
+    description: 'CampusConnect is a modern college management application with portals for admins, faculty, and students to streamline campus operations.',
+    techStack: 'Next.js, React, Tailwind CSS, Firebase',
+    githubUrl: '#',
+    liveUrl: '#',
+  },
+  {
     title: 'Event Scheduler App',
     description: 'TimeFlow is a smart calendar that organizes daily events with color-coded categories and browser reminders. Its core feature is an AI assistant that intelligently suggests optimal free slots for new events.',
     techStack: 'Next.js, React, Tailwind CSS, Firebase, Firestore, Genkit',
