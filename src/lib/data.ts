@@ -79,7 +79,6 @@ export const education = [
     {
       title: 'B.E. in Computer Science and Engineering',
       institution: 'Nadar Saraswathi College of Engineering and Technology',
-      date: '2023 - 2027',
-      description: 'Pursuing a degree with a focus on software engineering and artificial intelligence. Active member of the university coding club.',
+      date: '2023 - 2027'
     },
   ];
