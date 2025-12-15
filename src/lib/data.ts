@@ -37,6 +37,13 @@ export const skills = [
 
 export const initialProjects = [
   {
+    title: 'GeoTracker',
+    description: "GeoTracker is a real-time location tracking application that can find a user's current coordinates or geocode a location by name.",
+    techStack: 'Next.js, React, ShadCN UI, Tailwind CSS',
+    githubUrl: '#',
+    liveUrl: '#',
+  },
+  {
     title: 'CampusConnect',
     description: 'CampusConnect is a modern college management application with portals for admins, faculty, and students to streamline campus operations.',
     techStack: 'Next.js, React, Tailwind CSS, Firebase',
