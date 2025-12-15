@@ -77,9 +77,9 @@ export const internships = [
 
 export const education = [
     {
-      title: 'B.S. in Computer Science',
-      institution: 'University of Technology',
+      title: 'B.E. in Computer Science and Engineering',
+      institution: 'Nadar Saraswathi College of Engineering and Technology',
       date: '2020 - 2024',
-      description: 'Currently pursuing a degree with a focus on software engineering and artificial intelligence. Active member of the university coding club.',
+      description: 'Pursuing a degree with a focus on software engineering and artificial intelligence. Active member of the university coding club.',
     },
   ];
