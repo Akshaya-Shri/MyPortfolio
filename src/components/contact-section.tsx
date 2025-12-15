@@ -62,8 +62,8 @@ export default function ContactSection() {
                     <CardTitle>Contact Info</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-2">
-                    <p><strong>Email:</strong> akshaya.shri@email.com</p>
-                    <p><strong>Location:</strong> San Francisco, CA</p>
+                    <p><strong>Email:</strong> rkrkakshaya@gmail.com</p>
+                    <p><strong>Location:</strong> Theni, Tamil Nadu</p>
                 </CardContent>
             </Card>
             <div className="flex justify-center gap-6">
