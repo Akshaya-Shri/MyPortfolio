@@ -1,3 +1,30 @@
+export const skillCategories = [
+  {
+    title: 'Languages',
+    skills: [
+      { name: 'JavaScript', level: 95 },
+      { name: 'TypeScript', level: 90 },
+      { name: 'HTML/CSS', level: 98 },
+    ],
+  },
+  {
+    title: 'Frameworks & Libraries',
+    skills: [
+      { name: 'React / Next.js', level: 95 },
+      { name: 'Node.js', level: 88 },
+      { name: 'Tailwind CSS', level: 92 },
+    ],
+  },
+  {
+    title: 'Tools & Platforms',
+    skills: [
+      { name: 'Figma', level: 90 },
+      { name: 'Git & GitHub', level: 95 },
+      { name: 'Firebase', level: 80 },
+    ],
+  },
+];
+
 export const skills = [
   { name: 'Flutter', level: 95 },
   { name: 'Dart', level: 90 },
