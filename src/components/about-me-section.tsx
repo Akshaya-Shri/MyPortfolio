@@ -27,7 +27,7 @@ export default function AboutMeSection() {
           <div className="flex flex-col justify-center lg:col-span-3">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">About Me</h2>
             <p className="mt-4 text-foreground/80">
-              I am a dedicated and results-driven Senior Flutter Developer with over 5 years of experience in creating high-quality, scalable, and maintainable mobile applications. My journey in software development is fueled by a constant desire to learn and adapt to new technologies, ensuring that I deliver modern and efficient solutions.
+              Full-Stack Developer with a passion for designing intuitive user experiences and developing scalable web and mobile applications. Experienced in modern frameworks and tools, with a current focus on Firebase-powered app development. Dedicated to continuous learning and delivering high-quality, efficient digital solutions.
             </p>
             <p className="mt-4 text-foreground/80">
               When I'm not coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and hiking in the great outdoors.
