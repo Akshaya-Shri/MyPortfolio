@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { useToast } from '@/hooks/use-toast';
 
 const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
+  { icon: Github, href: 'https://github.com/Akshaya-Shri', label: 'GitHub' },
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
 ];
 
