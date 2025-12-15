@@ -66,18 +66,18 @@ export const initialProjects = [
   },
 ];
 
-export const experiences = [
+export const internships = [
   {
-    title: 'Senior Mobile Developer',
-    company: 'Tech Solutions Inc.',
-    date: 'Jan 2021 - Present',
-    description: 'Led the development of several high-profile mobile applications using Flutter. Mentored junior developers and improved code quality and development processes.',
+    title: 'Software Engineer Intern',
+    company: 'Tech Innovations',
+    date: 'Summer 2023',
+    description: 'Contributed to the development of a new feature for the company\'s flagship product. Worked with a team of developers to design, implement, and test the feature.',
   },
   {
-    title: 'Mobile App Developer',
-    company: 'Innovate Co.',
-    date: 'Jun 2018 - Dec 2020',
-    description: 'Developed and maintained cross-platform applications for iOS and Android, focusing on user experience and performance.',
+    title: 'Mobile App Developer Intern',
+    company: 'Creative Solutions',
+    date: 'Summer 2022',
+    description: 'Assisted in the development of a cross-platform mobile app using Flutter. Gained experience in UI/UX design and mobile development best practices.',
   },
 ];
 
@@ -85,7 +85,7 @@ export const education = [
     {
       title: 'B.S. in Computer Science',
       institution: 'University of Technology',
-      date: '2014 - 2018',
-      description: 'Graduated with honors, focusing on software engineering and mobile computing. Vice president of the coding club.',
+      date: '2020 - 2024',
+      description: 'Currently pursuing a degree with a focus on software engineering and artificial intelligence. Active member of the university coding club.',
     },
   ];

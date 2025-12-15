@@ -1,4 +1,4 @@
-import { experiences, education } from '@/lib/data';
+import { internships, education } from '@/lib/data';
 import { Briefcase, GraduationCap } from 'lucide-react';
 
 interface TimelineItemProps {
@@ -36,7 +36,7 @@ export default function ExperienceSection() {
             My Journey
           </h2>
           <p className="mt-4 max-w-[700px] text-foreground/80 md:text-xl">
-            A timeline of my professional experience and academic background.
+            A timeline of my internship experience and academic background.
           </p>
         </div>
 
@@ -44,10 +44,10 @@ export default function ExperienceSection() {
           <div>
             <h3 className="mb-8 text-2xl font-semibold flex items-center gap-3">
               <Briefcase className="w-6 h-6 text-accent"/>
-              Work Experience
+              Internship Experience
             </h3>
             <div className="relative">
-              {experiences.map((exp, index) => (
+              {internships.map((exp, index) => (
                 <TimelineItem 
                   key={index}
                   icon={<Briefcase className="h-5 w-5" />}
