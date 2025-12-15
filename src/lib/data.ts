@@ -1,3 +1,4 @@
+
 export const skillCategories = [
   {
     title: 'Languages',
@@ -35,6 +36,13 @@ export const skills = [
 ];
 
 export const initialProjects = [
+  {
+    title: 'Event Scheduler App',
+    description: 'TimeFlow is a smart calendar that organizes daily events with color-coded categories and browser reminders. Its core feature is an AI assistant that intelligently suggests optimal free slots for new events.',
+    techStack: 'Next.js, React, Tailwind CSS, Firebase, Firestore, Genkit',
+    githubUrl: '#',
+    liveUrl: '#',
+  },
   {
     title: 'E-commerce App',
     description: 'A feature-rich mobile e-commerce platform built with Flutter and Firebase, providing a seamless shopping experience.',
