@@ -6,7 +6,7 @@ interface TimelineItemProps {
   title: string;
   subtitle: string;
   date: string;
-  description: string;
+  description?: string;
 }
 
 function TimelineItem({ icon, title, subtitle, date, description }: TimelineItemProps) {
@@ -21,7 +21,7 @@ function TimelineItem({ icon, title, subtitle, date, description }: TimelineItem
         <p className="text-sm text-foreground/60">{date}</p>
       </div>
       <p className="mt-1 text-accent">{subtitle}</p>
-      <p className="mt-2 text-foreground/80">{description}</p>
+      {description && <p className="mt-2 text-foreground/80">{description}</p>}
     </div>
   );
 }
