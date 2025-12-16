@@ -17,12 +17,11 @@ export default function AboutMeSection() {
         <div className="grid gap-12 lg:grid-cols-5">
           <div className="lg:col-span-2">
             <Image
-              src="https://picsum.photos/seed/1/400/400"
+              src="/profile.jpg"
               alt="Akshaya Shri"
               width={400}
               height={400}
               className="mx-auto aspect-square rounded-full object-cover shadow-lg glow"
-              data-ai-hint="profile photo"
             />
           </div>
           <div className="flex flex-col justify-center lg:col-span-3">
