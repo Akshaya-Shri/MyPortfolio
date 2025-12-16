@@ -59,7 +59,7 @@ export default function ExperienceSection() {
               ))}
             </div>
           </div>
-          <div>
+          <div id="education">
             <h3 className="mb-8 text-2xl font-semibold flex items-center gap-3">
               <GraduationCap className="w-6 h-6 text-accent"/>
               Education
