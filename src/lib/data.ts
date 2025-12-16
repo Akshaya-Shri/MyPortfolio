@@ -40,7 +40,7 @@ export const initialProjects = [
     title: 'ExpenseWise',
     description: 'ExpenseWise is an AI-powered expense tracking app to manage your finances with smart insights. The app provides intelligent expense categorization and detects unusual spending patterns to help you stay on top of your budget.',
     techStack: 'Next.js, React, ShadCN UI, Tailwind CSS, Genkit',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Akshaya-Shri/expensemanager',
     liveUrl: '#',
   },
   {
