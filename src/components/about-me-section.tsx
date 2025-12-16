@@ -21,7 +21,7 @@ export default function AboutMeSection() {
               alt="Akshaya Shri"
               width={400}
               height={400}
-              className="mx-auto aspect-square rounded-full object-cover shadow-lg glow"
+              className="mx-auto aspect-square rounded-lg object-cover shadow-lg glow"
               data-ai-hint="profile photo"
             />
           </div>
