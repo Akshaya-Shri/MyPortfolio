@@ -26,6 +26,8 @@ const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
       </svg>
     ),
   };
+
+const allSkills = skillCategories.flatMap(category => category.skills);
   
 const renderSkill = (skill: Skill) => {
     const hasLogo = !!LanguageLogos[skill.name];
@@ -80,18 +82,13 @@ export default function SkillsSection() {
         </div>
         <div className="mx-auto mt-12 grid max-w-4xl gap-12">
           <TooltipProvider>
-            {skillCategories.map((category) => (
-              <div key={category.title}>
-                <h3 className="text-xl font-semibold mb-6 text-accent">{category.title}</h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                  {category.skills.map((skill) => (
-                    <div key={skill.name}>
-                        {renderSkill(skill)}
-                    </div>
-                  ))}
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+              {allSkills.map((skill) => (
+                <div key={skill.name}>
+                    {renderSkill(skill)}
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </TooltipProvider>
         </div>
       </div>
