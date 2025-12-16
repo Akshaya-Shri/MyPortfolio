@@ -18,8 +18,8 @@ export const skillCategories: { title: string; skills: Skill[] }[] = [
     title: 'Frameworks & Libraries',
     skills: [
       { name: 'React', level: 95 },
-      { name: 'Next.js', level: 95 },
-      { name: 'Node.js', level: 88 },
+      { name: 'Nextjs', level: 95 },
+      { name: 'Nodejs', level: 88 },
       { name: 'Tailwind', level: 92 },
     ],
   },

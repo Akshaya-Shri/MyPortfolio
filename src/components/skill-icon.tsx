@@ -7,11 +7,32 @@ interface SkillIconProps {
   className?: string;
 }
 
+const skillImageMap: Record<string, string> = {
+  javascript: '/logos/javascript.png',
+  typescript: '/logos/typescript.png',
+  html5: '/logos/html5.png',
+  css: '/logos/css.png',
+  react: '/logos/react.png',
+  nextjs: '/logos/nextjs.png',
+  nodejs: '/logos/nodejs.png',
+  tailwind: '/logos/tailwind.png',
+  figma: '/logos/figma.png',
+  git: '/logos/git.png',
+  github: '/logos/github.png',
+  firebase: '/logos/firebase.png',
+};
+
 export function SkillIcon({ name, className }: SkillIconProps) {
-  // Construct the path dynamically.
-  // Example: "Next.js" -> "/logos/nextjs.png"
-  // Example: "Tailwind CSS" -> "/logos/tailwind.png"
-  const src = `/logos/${name.toLowerCase().replace(/\./g, '').replace(/\s/g, '-')}.png`;
+  const key = name.toLowerCase().replace('.', '');
+  const src = skillImageMap[key];
+
+  if (!src) {
+    return (
+      <div className={cn('flex h-12 w-12 items-center justify-center', className)}>
+        <span className="text-xs font-bold text-center">{name}</span>
+      </div>
+    );
+  }
 
   return (
     <div className={cn('relative h-12 w-12', className)}>
@@ -22,15 +43,6 @@ export function SkillIcon({ name, className }: SkillIconProps) {
         sizes="48px"
         className="object-contain"
         unoptimized
-        // The `onError` prop will fall back to text if an image fails to load.
-        onError={(e) => {
-          const target = e.target as HTMLImageElement;
-          target.style.display = 'none'; // Hide the broken image
-          const textFallback = document.createElement('span');
-          textFallback.textContent = name;
-          textFallback.className = 'text-sm font-bold';
-          target.parentElement?.appendChild(textFallback);
-        }}
       />
     </div>
   );
