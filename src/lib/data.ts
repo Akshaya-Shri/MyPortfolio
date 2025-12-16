@@ -54,7 +54,7 @@ export const initialProjects = [
     title: 'CampusConnect',
     description: 'CampusConnect is a modern college management application with portals for admins, faculty, and students to streamline campus operations.',
     techStack: 'Next.js, React, Tailwind CSS, Firebase',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Akshaya-Shri/campusconnect',
     liveUrl: '#',
   },
   {
