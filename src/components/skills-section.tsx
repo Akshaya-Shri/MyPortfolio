@@ -2,9 +2,9 @@
 
 import { skillCategories, type Skill } from '@/lib/data';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import Image from 'next/image';
 
-
-const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
+const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>> | string> = {
     JavaScript: (props) => (
       <svg {...props} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fillRule="evenodd" clipRule="evenodd" strokeLinejoin="round" strokeMiterlimit="2"><path d="M0 0h24v24H0z" fill="none"/><path d="M12.001 0C5.373 0 0 5.373 0 12s5.373 12 12.001 12C18.628 24 24 18.627 24 12S18.628 0 12.001 0z" fill="#f7df1e"/><path d="M8.225 18.281h1.565c.782 0 1.282-.218 1.637-.655.354-.436.531-1.047.531-1.832 0-.82-.19-1.485-.571-1.995-.38-.51-.933-.765-1.656-.765h-.5v2.852H8.225v-4.519h.828c.553 0 1.01.129 1.369.386.36.258.63.63.812 1.116.183.486.274 1.02.274 1.598 0 .613-.105 1.182-.314 1.706-.21.524-.515.939-.915 1.246-.4.307-.872.46-1.415.46h-1.6zM13.79 13.754h1.033c.535 0 .973.134 1.315.403.342.268.583.633.722 1.094.139.46.209.95.209 1.467 0 .553-.086 1.06-.258 1.521-.171.46-.423.832-.756 1.116-.333.284-.738.426-1.215.426h-1.05v-5.027zm.923.89v3.247h.128c.365 0 .668-.09.907-.27.24-.18.423-.44.55-.78.125-.338.188-.72.188-1.144 0-.44-.06-.82-.18-1.139-.12-.32-.301-.568-.544-.743-.243-.175-.526-.263-.85-.263h-.15z"/></svg>
     ),
@@ -26,9 +26,7 @@ const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     'Tailwind CSS': (props) => (
       <svg {...props} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Tailwind CSS</title><path d="M12.001 0C5.373 0 0 5.373 0 12c0 6.628 5.373 12 12.001 12C18.628 24 24 18.628 24 12c0-6.627-5.372-12-11.999-12zm5.93 9.07a1.446 1.446 0 0 1-1.026.438 1.446 1.446 0 0 1-1.026-.438 1.444 1.444 0 0 1-.438-1.026 1.444 1.444 0 0 1 .438-1.026 1.446 1.446 0 0 1 1.026-.438 1.446 1.446 0 0 1 1.026.438 1.444 1.444 0 0 1 .438 1.026 1.444 1.444 0 0 1-.438 1.026zm-8.086 0a1.446 1.446 0 0 1-1.026.438 1.446 1.446 0 0 1-1.026-.438 1.444 1.444 0 0 1-.438-1.026 1.444 1.444 0 0 1 .438-1.026 1.446 1.446 0 0 1 1.026-.438c.39 0 .74.146 1.026.438a1.444 1.444 0 0 1 .438 1.026 1.444 1.444 0 0 1-.438 1.026zm4.043 5.467c-2.34 0-4.24-1.89-4.24-4.22h8.48c0 2.33-1.9 4.22-4.24 4.22z" fill="#38b2ac"/></svg>
     ),
-    Figma: (props) => (
-      <svg {...props} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Figma</title><path d="M7.8,0H16.2C19.836,0,24,3.164,24,7.8v8.4c0,3.636-3.164,7.8-7.8,7.8H7.8C3.164,24,0,20.836,0,16.2V7.8C0,3.164,3.164,0,7.8,0Z" fill="#2c2c2c"/><path d="M12,24C15.936,24,18,20.836,18,18V6C18,3.164,15.936,0,12,0" fill="#0acf83"/><path d="M6,12C6,14.836,8.064,18,12,18V6C8.064,6,6,8.164,6,12Z" fill="#a259ff"/><path d="M6,12C6,8.164,8.064,6,12,6H18V18C18,14.836,15.936,12,12,12H6Z" fill="#f24e1e"/><path d="M12,0C8.064,0,6,3.164,6,6V12h12V6C18,3.164,15.936,0,12,0Z" fill="#ff7262"/><path d="M12,12a6,6,0,1,1,6,6,6,6,0,0,1-6-6Z" fill="#1abcfe"/></svg>
-    ),
+    Figma: '/figma.png',
     'Git & GitHub': (props) => (
       <svg {...props} role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
     ),
@@ -40,15 +38,29 @@ const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 const allSkills = skillCategories.flatMap(category => category.skills);
   
 const renderSkill = (skill: Skill) => {
-    const hasLogo = !!LanguageLogos[skill.name];
-    const Logo = hasLogo ? LanguageLogos[skill.name] : null;
+    const LogoOrPath = LanguageLogos[skill.name];
+    let skillElement;
 
-    const skillElement = (
-        <div className="flex items-center gap-3 p-2 rounded-full bg-background/50 justify-center h-16 w-16">
-            {Logo && <Logo className="h-8 w-8" />}
-            {!hasLogo && <span className="font-medium text-center text-xs leading-tight">{skill.name}</span>}
-        </div>
-    );
+    if (typeof LogoOrPath === 'string') {
+        skillElement = (
+            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-background/50 p-2">
+                <Image src={LogoOrPath} alt={skill.name} width={40} height={40} className="object-contain" />
+            </div>
+        );
+    } else if (LogoOrPath) {
+        const Logo = LogoOrPath;
+        skillElement = (
+            <div className="flex items-center gap-3 p-2 rounded-full bg-background/50 justify-center h-16 w-16">
+                <Logo className="h-10 w-10" />
+            </div>
+        );
+    } else {
+        skillElement = (
+            <div className="flex items-center gap-3 p-2 rounded-full bg-background/50 justify-center h-16 w-16">
+                <span className="font-medium text-center text-xs leading-tight">{skill.name}</span>
+            </div>
+        );
+    }
     
     return (
       <Tooltip>
