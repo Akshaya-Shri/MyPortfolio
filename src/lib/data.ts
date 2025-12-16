@@ -92,7 +92,7 @@ export const education = [
     {
       title: 'Higher Secondary Education (Class XII)',
       institution: 'Government Girls Higher Secondary School - Periyakulam',
-      date: '2022 - 2023'
+      date: '2020 - 2021'
     },
     {
       title: 'Secondary Education (Class X)',
