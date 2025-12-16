@@ -61,7 +61,7 @@ export const initialProjects = [
     title: 'Event Scheduler App',
     description: 'TimeFlow is a smart calendar that organizes daily events with color-coded categories and browser reminders. Its core feature is an AI assistant that intelligently suggests optimal free slots for new events.',
     techStack: 'Next.js, React, Tailwind CSS, Firebase, Firestore, Genkit',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Akshaya-Shri/studio',
     liveUrl: '#',
   },
 ];
