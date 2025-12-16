@@ -25,13 +25,13 @@ const renderSkill = (skill: Skill) => {
 
     if (logoPath) {
         skillElement = (
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-background/50 p-2">
-                <Image src={logoPath} alt={skill.name} width={48} height={48} className="object-contain" />
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-background/50 p-3">
+                <Image src={logoPath} alt={skill.name} width={64} height={64} className="object-contain" />
             </div>
         );
     } else {
         skillElement = (
-            <div className="flex items-center justify-center h-16 w-16 rounded-full bg-background/50 p-2">
+            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-background/50 p-2">
                 <span className="font-medium text-center text-xs leading-tight">{skill.name}</span>
             </div>
         );
