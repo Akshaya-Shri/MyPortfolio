@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 
 const strengths = [
-  'Cross-Platform Development',
+  'Quick Learner',
   'UI/UX Design Principles',
   'Agile Methodologies',
   'Problem Solving',
