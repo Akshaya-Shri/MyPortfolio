@@ -1,7 +1,5 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Progress } from '@/components/ui/progress';
 import { skillCategories, type Skill } from '@/lib/data';
 
 const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
@@ -24,25 +22,6 @@ const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
   
 
 export default function SkillsSection() {
-  const [progressValues, setProgressValues] = useState(
-    skillCategories.flatMap(category => category.skills.map(() => 0))
-  );
-
-  useEffect(() => {
-    const allSkills = skillCategories.flatMap(category => category.skills);
-    const timers = allSkills.map((skill, index) =>
-      setTimeout(() => {
-        setProgressValues((prev) => {
-          const newValues = [...prev];
-          newValues[index] = skill.level;
-          return newValues;
-        });
-      }, 150 * (index + 1)) // Stagger the animation
-    );
-    return () => timers.forEach(clearTimeout);
-  }, []);
-
-  let skillIndex = -1;
 
   const renderSkillName = (skill: Skill) => {
     if (LanguageLogos[skill.name]) {
@@ -67,16 +46,12 @@ export default function SkillsSection() {
           {skillCategories.map((category) => (
             <div key={category.title}>
               <h3 className="text-xl font-semibold mb-6 text-accent">{category.title}</h3>
-              <div className="grid gap-8">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {category.skills.map((skill) => {
-                  skillIndex++;
-                  const currentIndex = skillIndex;
                   return (
-                    <div key={skill.name} className="flex flex-col gap-2">
-                      <div className="flex items-center justify-between">
-                        {renderSkillName(skill)}
-                      </div>
-                      <Progress value={progressValues[currentIndex]} className="h-3 [&>div]:bg-gradient-to-r [&>div]:from-accent [&>div]:to-primary" />
+                    <div key={skill.name} className="flex items-center gap-3 p-2 rounded-md bg-background/50 justify-center">
+                      {renderSkillName(skill)}
+                      {skill.name.includes('/') ? <span className="font-medium">{skill.name}</span> : null}
                     </div>
                   );
                 })}
