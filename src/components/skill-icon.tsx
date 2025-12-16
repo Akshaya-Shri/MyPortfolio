@@ -15,6 +15,7 @@ const skillImageMap: Record<string, string> = {
   react: '/logos/react.png',
   nextjs: '/logos/nextjs.png',
   nodejs: '/logos/nodejs.png',
+  'tailwind css': '/logos/tailwind-css.png',
   figma: '/logos/figma.png',
   git: '/logos/git.png',
   github: '/logos/github.png',
