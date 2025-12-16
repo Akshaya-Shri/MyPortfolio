@@ -69,13 +69,16 @@ export default function ContactSection() {
                 </CardContent>
             </Card>
             <div className="flex justify-center gap-6">
-              {socialLinks.map(({ icon: Icon, href, label }) => (
-                <Link key={label} href={href} target="_blank">
-                  <Button variant="outline" size="icon" aria-label={label}>
-                    <Icon className="h-5 w-5" />
-                  </Button>
-                </Link>
-              ))}
+              {socialLinks.map(({ icon: Icon, href, label }) => {
+                const isExternal = href.startsWith('http');
+                return (
+                  <Link key={label} href={href} target={isExternal ? '_blank' : '_self'} rel={isExternal ? 'noopener noreferrer' : ''}>
+                    <Button variant="outline" size="icon" aria-label={label}>
+                      <Icon className="h-5 w-5" />
+                    </Button>
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
