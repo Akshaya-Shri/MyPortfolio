@@ -1,6 +1,8 @@
 'use client';
 
 import { skillCategories, type Skill } from '@/lib/data';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+
 
 const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     JavaScript: (props) => (
@@ -20,16 +22,45 @@ const LanguageLogos: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
     ),
   };
   
+const renderSkill = (skill: Skill) => {
+    const hasLogo = !!LanguageLogos[skill.name];
+    const Logo = hasLogo ? LanguageLogos[skill.name] : null;
+
+    const skillElement = (
+        <div className="flex items-center gap-3 p-2 rounded-md bg-background/50 justify-center h-12 w-full">
+            {Logo && <Logo className="h-6 w-6" />}
+            {!hasLogo && <span className="font-medium text-center">{skill.name}</span>}
+            {skill.name.includes('/') && !hasLogo ? <span className="font-medium">{skill.name}</span> : null}
+        </div>
+    );
+
+    if (hasLogo) {
+        return (
+            <Tooltip>
+                <TooltipTrigger asChild>
+                    {skillElement}
+                </TooltipTrigger>
+                <TooltipContent>
+                    <p>{skill.name}</p>
+                </TooltipContent>
+            </Tooltip>
+        );
+    }
+    
+    return (
+      <Tooltip>
+          <TooltipTrigger asChild>
+              {skillElement}
+          </TooltipTrigger>
+          <TooltipContent>
+              <p>{skill.name}</p>
+          </TooltipContent>
+      </Tooltip>
+  );
+};
+
 
 export default function SkillsSection() {
-
-  const renderSkillName = (skill: Skill) => {
-    if (LanguageLogos[skill.name]) {
-      const Logo = LanguageLogos[skill.name];
-      return <Logo className="h-6 w-6" />;
-    }
-    return <span className="font-medium">{skill.name}</span>;
-  }
 
   return (
     <section id="skills" className="bg-card">
@@ -43,21 +74,20 @@ export default function SkillsSection() {
           </p>
         </div>
         <div className="mx-auto mt-12 grid max-w-4xl gap-12">
-          {skillCategories.map((category) => (
-            <div key={category.title}>
-              <h3 className="text-xl font-semibold mb-6 text-accent">{category.title}</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-                {category.skills.map((skill) => {
-                  return (
-                    <div key={skill.name} className="flex items-center gap-3 p-2 rounded-md bg-background/50 justify-center">
-                      {renderSkillName(skill)}
-                      {skill.name.includes('/') ? <span className="font-medium">{skill.name}</span> : null}
+          <TooltipProvider>
+            {skillCategories.map((category) => (
+              <div key={category.title}>
+                <h3 className="text-xl font-semibold mb-6 text-accent">{category.title}</h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                  {category.skills.map((skill) => (
+                    <div key={skill.name}>
+                        {renderSkill(skill)}
                     </div>
-                  );
-                })}
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </TooltipProvider>
         </div>
       </div>
     </section>
