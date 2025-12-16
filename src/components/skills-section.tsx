@@ -25,13 +25,13 @@ const renderSkill = (skill: Skill) => {
 
     if (logoPath) {
         skillElement = (
-            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-background/50 p-3">
+            <div className="flex items-center justify-center h-24 w-24 rounded-full bg-background/50 p-3">
                 <Image src={logoPath} alt={skill.name} width={64} height={64} className="object-contain" />
             </div>
         );
     } else {
         skillElement = (
-            <div className="flex items-center justify-center h-20 w-20 rounded-full bg-background/50 p-2">
+            <div className="flex items-center justify-center h-24 w-24 rounded-full bg-background/50 p-2">
                 <span className="font-medium text-center text-xs leading-tight">{skill.name}</span>
             </div>
         );
@@ -65,7 +65,7 @@ export default function SkillsSection() {
         </div>
         <div className="mx-auto mt-12 grid max-w-4xl gap-12">
           <TooltipProvider>
-            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-4">
+            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 gap-4">
               {allSkills.map((skill) => (
                 <div key={skill.name} className="flex justify-center">
                     {renderSkill(skill)}
