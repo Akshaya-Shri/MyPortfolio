@@ -11,7 +11,7 @@ export const skillCategories: { title: string; skills: Skill[] }[] = [
       { name: 'JavaScript', level: 95 },
       { name: 'TypeScript', level: 90 },
       { name: 'HTML5', level: 98 },
-      { name: 'CSS3', level: 98 },
+      { name: 'CSS', level: 98 },
     ],
   },
   {
@@ -20,7 +20,7 @@ export const skillCategories: { title: string; skills: Skill[] }[] = [
       { name: 'React', level: 95 },
       { name: 'Next.js', level: 95 },
       { name: 'Node.js', level: 88 },
-      { name: 'Tailwind CSS', level: 92 },
+      { name: 'Tailwind', level: 92 },
     ],
   },
   {
@@ -28,7 +28,7 @@ export const skillCategories: { title: string; skills: Skill[] }[] = [
     skills: [
       { name: 'Figma', level: 90 },
       { name: 'Git', level: 95 },
-      { name: 'GitHub', level: 95 },
+      { name: 'Github', level: 95 },
       { name: 'Firebase', level: 80 },
     ],
   },

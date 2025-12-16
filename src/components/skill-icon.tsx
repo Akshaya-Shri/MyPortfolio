@@ -10,7 +10,7 @@ interface SkillIconProps {
 export function SkillIcon({ name, className }: SkillIconProps) {
   // Construct the path dynamically.
   // Example: "Next.js" -> "/logos/nextjs.png"
-  // Example: "Tailwind CSS" -> "/logos/tailwind-css.png"
+  // Example: "Tailwind CSS" -> "/logos/tailwind.png"
   const src = `/logos/${name.toLowerCase().replace(/\./g, '').replace(/\s/g, '-')}.png`;
 
   return (
