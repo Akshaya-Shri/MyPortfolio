@@ -10,7 +10,8 @@ export const skillCategories: { title: string; skills: Skill[] }[] = [
     skills: [
       { name: 'JavaScript', level: 95 },
       { name: 'TypeScript', level: 90 },
-      { name: 'HTML/CSS', level: 98 },
+      { name: 'HTML', level: 98 },
+      { name: 'CSS', level: 98 },
     ],
   },
   {
