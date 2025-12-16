@@ -47,7 +47,7 @@ export const initialProjects = [
     title: 'GeoTracker',
     description: "GeoTracker is a real-time location tracking application that can find a user's current coordinates or geocode a location by name.",
     techStack: 'Next.js, React, ShadCN UI, Tailwind CSS',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Akshaya-Shri/geoLocation-',
     liveUrl: '#',
   },
   {
