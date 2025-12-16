@@ -34,9 +34,9 @@ const renderSkill = (skill: Skill) => {
     const Logo = hasLogo ? LanguageLogos[skill.name] : null;
 
     const skillElement = (
-        <div className="flex items-center gap-3 p-2 rounded-md bg-background/50 justify-center h-12 w-full">
+        <div className="flex items-center gap-3 p-2 rounded-full bg-background/50 justify-center h-12 w-12">
             {Logo && <Logo className="h-6 w-6" />}
-            {!hasLogo && <span className="font-medium text-center">{skill.name}</span>}
+            {!hasLogo && <span className="font-medium text-center text-xs leading-tight">{skill.name}</span>}
             {skill.name.includes('/') && !hasLogo ? <span className="font-medium">{skill.name}</span> : null}
         </div>
     );
@@ -82,9 +82,9 @@ export default function SkillsSection() {
         </div>
         <div className="mx-auto mt-12 grid max-w-4xl gap-12">
           <TooltipProvider>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-8 gap-4">
               {allSkills.map((skill) => (
-                <div key={skill.name}>
+                <div key={skill.name} className="flex justify-center">
                     {renderSkill(skill)}
                 </div>
               ))}
