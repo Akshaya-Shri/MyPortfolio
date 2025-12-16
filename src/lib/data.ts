@@ -20,7 +20,6 @@ export const skillCategories: { title: string; skills: Skill[] }[] = [
       { name: 'React', level: 95 },
       { name: 'Nextjs', level: 95 },
       { name: 'Nodejs', level: 88 },
-      { name: 'Tailwind CSS', level: 92 },
     ],
   },
   {
@@ -92,7 +91,7 @@ export const education = [
     {
       title: 'Higher Secondary Education (Class XII)',
       institution: 'Government Girls Higher Secondary School - Periyakulam',
-      date: '2020 - 2021'
+      date: '2022 - 2023'
     },
     {
       title: 'Secondary Education (Class X)',
