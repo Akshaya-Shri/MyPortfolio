@@ -1,5 +1,5 @@
-import { internships } from '@/lib/data';
-import { Briefcase } from 'lucide-react';
+import { education } from '@/lib/data';
+import { GraduationCap } from 'lucide-react';
 
 interface TimelineItemProps {
   icon: React.ReactNode;
@@ -26,31 +26,30 @@ function TimelineItem({ icon, title, subtitle, date, description }: TimelineItem
   );
 }
 
-
-export default function ExperienceSection() {
+export default function EducationSection() {
   return (
-    <section id="experience" className="bg-card">
+    <section id="education" className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">
-            Internship
+            Education
           </h2>
           <p className="mt-4 max-w-[700px] text-foreground/80 md:text-xl">
-            A timeline of my internship background.
+            A timeline of my academic background.
           </p>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-16">
           <div>
             <div className="relative">
-              {internships.map((exp, index) => (
+              {education.map((edu, index) => (
                 <TimelineItem 
                   key={index}
-                  icon={<Briefcase className="h-5 w-5" />}
-                  title={exp.title}
-                  subtitle={exp.company}
-                  date={exp.date}
-                  description={exp.description}
+                  icon={<GraduationCap className="h-5 w-5" />}
+                  title={edu.title}
+                  subtitle={edu.institution}
+                  date={edu.date}
+                  description={edu.description}
                 />
               ))}
             </div>
