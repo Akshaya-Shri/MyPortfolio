@@ -11,7 +11,7 @@ const TypeScript = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 const HTML5 = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg viewBox="0 0 32 32" fill="#E34F26" {...props}><path d="m2 2 2.2 24.9L16 30l11.8-3.1L30 2z" /><path d="m16 27.8 9.6-2.6L27.5 5H16z" fill="#F06529" /><path d="m16 16.2h-6.8l-.5-5.1h7.3V7H8.2l.7 8h7.1zm.1 6.5-3.4-1-.2-2.2h-4.2l.3 3.3 7.5 2.1z" fill="#EBEBEB" /><path d="m16 16.2v4.3l3.4 1 .3-3.3h-3.7zm0-9.2v4.1h6.3l.5-5.1H16zm0 11.6v2.2l-7.5-2.1-.2-1.3h4.2l.2 1.2z" fill="#FFF" /></svg>
+  <svg viewBox="0 0 32 32" fill="#E34F26" {...props}><path d="m2 2 2.2 24.9L16 30l11.8-3.1L30 2z" /><path d="m16 27.8 9.6-2.6L27.5 5H16z" fill="#F06529" /><path d="m16 16.2h-6.8l-.5-5.1h7.3V7H8.2l.7 8h7.1zm.1 6.5-3.4-1-.2-2.2h-4.2l.3 3.3 7.5 2.1z" fill="#EBEBEB" /><path d="M16 16.2v4.3l3.4-1 .2-2.2h-3.6zm0-9.2v4.1h6.3l.5-5.1H16zm0 11.6v2.2l-7.5-2.1-.2-1.3h4.2l.2 1.2z" fill="#FFF" /></svg>
 );
 
 const CSS3 = (props: React.SVGProps<SVGSVGElement>) => (
