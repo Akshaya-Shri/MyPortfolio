@@ -3,18 +3,18 @@ import React from 'react';
 import Image from 'next/image';
 
 const skillImageMap: { [key: string]: string } = {
-  JavaScript: '/javascript.svg',
-  TypeScript: '/typescript.svg',
-  HTML5: '/html5.svg',
-  CSS3: '/css3.svg',
-  React: '/react.svg',
-  'Next.js': '/next-js.svg',
-  'Node.js': '/node-js.svg',
-  'Tailwind CSS': '/tailwind-css.svg',
-  Figma: '/figma.svg',
-  Git: '/git.svg',
-  GitHub: '/github.svg',
-  Firebase: '/firebase.svg',
+  JavaScript: '/javascript.png',
+  TypeScript: '/typescript.png',
+  HTML5: '/html.png',
+  CSS3: '/css.png',
+  React: '/react.png',
+  'Next.js': '/nextjs.png',
+  'Node.js': '/nodejs.png',
+  'Tailwind CSS': '/tailwind.png',
+  Figma: '/figma.png',
+  Git: '/git.png',
+  GitHub: '/github.png',
+  Firebase: '/firebase.png',
 };
 
 interface SkillIconProps {
@@ -31,13 +31,12 @@ export function SkillIcon({ name, className }: SkillIconProps) {
   }
 
   return (
-    <div className={cn('relative h-8 w-8', className)}>
+    <div className={cn('relative h-12 w-12', className)}>
       <Image
         src={src}
         alt={`${name} logo`}
         fill
         className="object-contain"
-        unoptimized // Allows using SVGs without width/height
       />
     </div>
   );
