@@ -27,7 +27,7 @@ export function SkillIcon({ name, className }: SkillIconProps) {
 
   if (!src) {
     // Fallback for skills without a specific icon
-    return <span className={cn('text-sm font-bold', className)}>{name.slice(0, 3)}</span>;
+    return <span className={cn('text-sm font-bold', className)}>{name}</span>;
   }
 
   return (
@@ -36,7 +36,9 @@ export function SkillIcon({ name, className }: SkillIconProps) {
         src={src}
         alt={`${name} logo`}
         fill
+        sizes="48px"
         className="object-contain"
+        unoptimized
       />
     </div>
   );
