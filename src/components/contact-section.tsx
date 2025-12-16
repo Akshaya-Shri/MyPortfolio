@@ -71,10 +71,10 @@ export default function ContactSection() {
               {socialLinks.map(({ icon: Icon, href, label }) => {
                 const isHttp = href.startsWith('http');
                 return (
-                  <a 
-                    key={label} 
-                    href={href} 
-                    target={isHttp ? '_blank' : undefined} 
+                  <a
+                    key={label}
+                    href={href}
+                    target={isHttp ? '_blank' : undefined}
                     rel={isHttp ? 'noopener noreferrer' : undefined}
                     aria-label={label}
                   >
