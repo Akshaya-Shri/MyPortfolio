@@ -1,5 +1,10 @@
 
-export const skillCategories = [
+export interface Skill {
+  name: string;
+  level: number;
+}
+
+export const skillCategories: { title: string; skills: Skill[] }[] = [
   {
     title: 'Languages',
     skills: [
@@ -26,7 +31,7 @@ export const skillCategories = [
   },
 ];
 
-export const skills = [
+export const skills: Skill[] = [
   { name: 'Flutter', level: 95 },
   { name: 'Dart', level: 90 },
   { name: 'Firebase', level: 85 },
