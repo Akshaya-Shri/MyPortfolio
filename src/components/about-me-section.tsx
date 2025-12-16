@@ -5,7 +5,7 @@ import { CheckCircle } from 'lucide-react';
 const strengths = [
   'Quick Learner',
   'UI/UX Design Principles',
-  'Agile Methodologies',
+  'Performance focused',
   'Problem Solving',
   'Team Collaboration',
 ];
