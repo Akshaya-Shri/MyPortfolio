@@ -97,6 +97,6 @@ export const education = [
     {
       title: 'Secondary Education (Class X)',
       institution: 'Government Girls Higher Secondary School - Periyakulam',
-      date: '2020-2021'
+      date: '2020 - 2021'
     }
   ];
