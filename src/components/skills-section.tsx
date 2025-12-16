@@ -2,45 +2,19 @@
 
 import { skillCategories, type Skill } from '@/lib/data';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import Image from 'next/image';
-
-const LanguageLogos: Record<string, string> = {
-    JavaScript: '/javascript.png',
-    TypeScript: '/typescript.png',
-    HTML: '/html.png',
-    CSS: '/css.png',
-    'React / Next.js': '/nextjs.png',
-    'Node.js': '/nodejs.png',
-    'Tailwind CSS': '/tailwind.png',
-    Figma: '/figma.png',
-    'Git & GitHub': '/github.png',
-    Firebase: '/firebase.png',
-  };
+import { Card, CardContent } from '@/components/ui/card';
 
 const allSkills = skillCategories.flatMap(category => category.skills);
   
 const renderSkill = (skill: Skill) => {
-    const logoPath = LanguageLogos[skill.name];
-    let skillElement;
-
-    if (logoPath) {
-        skillElement = (
-            <div className="flex items-center justify-center h-24 w-24 rounded-full bg-background/50 p-3">
-                <Image src={logoPath} alt={skill.name} width={64} height={64} className="object-contain" />
-            </div>
-        );
-    } else {
-        skillElement = (
-            <div className="flex items-center justify-center h-24 w-24 rounded-full bg-background/50 p-2">
-                <span className="font-medium text-center text-xs leading-tight">{skill.name}</span>
-            </div>
-        );
-    }
-    
     return (
       <Tooltip>
           <TooltipTrigger asChild>
-              {skillElement}
+              <Card className="flex h-24 w-24 cursor-pointer items-center justify-center p-2 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20">
+                <CardContent className="p-0">
+                  <span className="text-center text-xs font-medium leading-tight">{skill.name}</span>
+                </CardContent>
+              </Card>
           </TooltipTrigger>
           <TooltipContent>
               <p>{skill.name}</p>
@@ -63,9 +37,9 @@ export default function SkillsSection() {
             A snapshot of the technologies and tools I work with to bring ideas to life.
           </p>
         </div>
-        <div className="mx-auto mt-12 grid max-w-4xl gap-12">
+        <div className="mx-auto mt-12 max-w-4xl">
           <TooltipProvider>
-            <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-5 gap-4">
+            <div className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-5">
               {allSkills.map((skill) => (
                 <div key={skill.name} className="flex justify-center">
                     {renderSkill(skill)}
