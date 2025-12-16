@@ -22,7 +22,7 @@ const skillImageMap: Record<string, string> = {
 };
 
 export function SkillIcon({ name, className }: SkillIconProps) {
-  const key = name.toLowerCase().replace('.', '');
+  const key = name.toLowerCase();
   const src = skillImageMap[key];
 
   if (!src) {
