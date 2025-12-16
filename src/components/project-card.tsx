@@ -2,7 +2,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 type ProjectCardProps = {
   title: string;
@@ -32,11 +32,6 @@ export function ProjectCard({ title, description, techStack, githubUrl, liveUrl 
         <Button asChild variant="ghost" size="icon">
           <Link href={githubUrl} target="_blank" aria-label={`GitHub for ${title}`}>
             <Github className="h-5 w-5" />
-          </Link>
-        </Button>
-        <Button asChild variant="ghost" size="icon">
-          <Link href={liveUrl} target="_blank" aria-label={`Live demo for ${title}`}>
-            <ExternalLink className="h-5 w-5" />
           </Link>
         </Button>
       </CardFooter>
