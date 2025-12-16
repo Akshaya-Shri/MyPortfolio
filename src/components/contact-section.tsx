@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/com
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Github, Linkedin, Mail, Phone } from 'lucide-react';
-import Link from 'next/link';
 import { useToast } from '@/hooks/use-toast';
 
 const socialLinks = [
@@ -72,16 +71,17 @@ export default function ContactSection() {
               {socialLinks.map(({ icon: Icon, href, label }) => {
                 const isHttp = href.startsWith('http');
                 return (
-                  <Link 
+                  <a 
                     key={label} 
                     href={href} 
                     target={isHttp ? '_blank' : undefined} 
                     rel={isHttp ? 'noopener noreferrer' : undefined}
+                    aria-label={label}
                   >
-                    <Button variant="outline" size="icon" aria-label={label}>
-                      <Icon className="h-5 w-5" />
+                    <Button variant="outline" size="icon" asChild>
+                      <span><Icon className="h-5 w-5" /></span>
                     </Button>
-                  </Link>
+                  </a>
                 );
               })}
             </div>
