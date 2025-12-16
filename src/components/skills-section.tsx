@@ -3,29 +3,28 @@
 import { skillCategories, type Skill } from '@/lib/data';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Card, CardContent } from '@/components/ui/card';
+import { SkillIcon } from '@/components/skill-icon';
 
 const allSkills = skillCategories.flatMap(category => category.skills);
-  
+
 const renderSkill = (skill: Skill) => {
-    return (
-      <Tooltip>
-          <TooltipTrigger asChild>
-              <Card className="flex h-24 w-24 cursor-pointer items-center justify-center p-2 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20">
-                <CardContent className="p-0">
-                  <span className="text-center text-xs font-medium leading-tight">{skill.name}</span>
-                </CardContent>
-              </Card>
-          </TooltipTrigger>
-          <TooltipContent>
-              <p>{skill.name}</p>
-          </TooltipContent>
-      </Tooltip>
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Card className="flex h-24 w-24 cursor-pointer items-center justify-center p-4 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 rounded-full">
+          <CardContent className="p-0 flex items-center justify-center">
+            <SkillIcon name={skill.name} className="h-12 w-12" />
+          </CardContent>
+        </Card>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{skill.name}</p>
+      </TooltipContent>
+    </Tooltip>
   );
 };
 
-
 export default function SkillsSection() {
-
   return (
     <section id="skills" className="bg-card">
       <div className="container mx-auto px-4 md:px-6">
@@ -39,10 +38,10 @@ export default function SkillsSection() {
         </div>
         <div className="mx-auto mt-12 max-w-4xl">
           <TooltipProvider>
-            <div className="grid grid-cols-3 gap-6 sm:grid-cols-4 md:grid-cols-5">
+            <div className="flex flex-wrap justify-center gap-6">
               {allSkills.map((skill) => (
                 <div key={skill.name} className="flex justify-center">
-                    {renderSkill(skill)}
+                  {renderSkill(skill)}
                 </div>
               ))}
             </div>
