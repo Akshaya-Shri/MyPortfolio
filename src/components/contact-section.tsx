@@ -10,7 +10,6 @@ import { useToast } from '@/hooks/use-toast';
 const socialLinks = [
   { icon: Github, href: 'https://github.com/Akshaya-Shri', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/akshaya-k-9a46772a3', label: 'LinkedIn' },
-  { icon: Mail, href: 'mailto:rkrkakshaya@gmail.com', label: 'Email' },
   { icon: Phone, href: 'tel:9865139842', label: 'Phone' },
 ];
 
