@@ -2,33 +2,16 @@ import { cn } from '@/lib/utils';
 import React from 'react';
 import Image from 'next/image';
 
-const skillImageMap: { [key: string]: string } = {
-  JavaScript: '/javascript.png',
-  TypeScript: '/typescript.png',
-  HTML5: '/html.png',
-  CSS3: '/css.png',
-  React: '/react.png',
-  'Next.js': '/nextjs.png',
-  'Node.js': '/nodejs.png',
-  'Tailwind CSS': '/tailwind.png',
-  Figma: '/figma.png',
-  Git: '/git.png',
-  GitHub: '/github.png',
-  Firebase: '/firebase.png',
-};
-
 interface SkillIconProps {
   name: string;
   className?: string;
 }
 
 export function SkillIcon({ name, className }: SkillIconProps) {
-  const src = skillImageMap[name];
-
-  if (!src) {
-    // Fallback for skills without a specific icon
-    return <span className={cn('text-sm font-bold', className)}>{name}</span>;
-  }
+  // Construct the path dynamically.
+  // Example: "Next.js" -> "/logos/next.js.png"
+  // Example: "Tailwind CSS" -> "/logos/tailwind-css.png"
+  const src = `/logos/${name.toLowerCase().replace(/\./g, '').replace(/\s/g, '-')}.png`;
 
   return (
     <div className={cn('relative h-12 w-12', className)}>
@@ -39,6 +22,15 @@ export function SkillIcon({ name, className }: SkillIconProps) {
         sizes="48px"
         className="object-contain"
         unoptimized
+        // The `onError` prop will fall back to text if an image fails to load.
+        onError={(e) => {
+          const target = e.target as HTMLImageElement;
+          target.style.display = 'none'; // Hide the broken image
+          const textFallback = document.createElement('span');
+          textFallback.textContent = name;
+          textFallback.className = 'text-sm font-bold';
+          target.parentElement?.appendChild(textFallback);
+        }}
       />
     </div>
   );
