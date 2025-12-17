@@ -12,8 +12,6 @@ const socialLinks = [
 ];
 
 export default function ContactSection() {
-  const formspreeEndpoint = "https://formspree.io/f/mgvggqbd"; // Replace with your Formspree form ID
-
   return (
     <section id="contact" className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
@@ -33,7 +31,7 @@ export default function ContactSection() {
               <CardDescription>Fill out the form and I'll get back to you.</CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4" action={formspreeEndpoint} method="POST">
+              <form className="space-y-4" action="https://formspree.io/f/mgvggqbd" method="POST">
                 <Input type="text" name="name" placeholder="Your Name" required />
                 <Input type="email" name="email" placeholder="Your Email" required />
                 <Textarea name="message" placeholder="Your Message" required />
