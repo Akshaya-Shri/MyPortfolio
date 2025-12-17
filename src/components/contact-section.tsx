@@ -4,8 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail } from 'lucide-react';
-import { useToast } from '@/hooks/use-toast';
+import { Github, Linkedin } from 'lucide-react';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/Akshaya-Shri', label: 'GitHub' },
@@ -13,17 +12,7 @@ const socialLinks = [
 ];
 
 export default function ContactSection() {
-  const { toast } = useToast();
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    // In a real app, you would handle form submission here (e.g., send to an API)
-    toast({
-      title: 'Message Sent!',
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    (event.target as HTMLFormElement).reset();
-  };
+  const formspreeEndpoint = "https://formspree.io/f/your-form-id"; // Replace with your Formspree form ID
 
   return (
     <section id="contact" className="bg-background">
@@ -44,10 +33,10 @@ export default function ContactSection() {
               <CardDescription>Fill out the form and I'll get back to you.</CardDescription>
             </CardHeader>
             <CardContent>
-              <form className="space-y-4" onSubmit={handleSubmit}>
-                <Input type="text" placeholder="Your Name" required />
-                <Input type="email" placeholder="Your Email" required />
-                <Textarea placeholder="Your Message" required />
+              <form className="space-y-4" action={formspreeEndpoint} method="POST">
+                <Input type="text" name="name" placeholder="Your Name" required />
+                <Input type="email" name="email" placeholder="Your Email" required />
+                <Textarea name="message" placeholder="Your Message" required />
                 <Button type="submit" className="w-full">
                   Send Message
                 </Button>
