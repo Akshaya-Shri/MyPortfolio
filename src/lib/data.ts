@@ -102,4 +102,3 @@ export const education = [
       description: 'Established a strong academic foundation with a broad curriculum.'
     }
   ];
-
