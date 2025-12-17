@@ -12,7 +12,7 @@ const socialLinks = [
 ];
 
 export default function ContactSection() {
-  const formspreeEndpoint = "https://formspree.io/f/your-form-id"; // Replace with your Formspree form ID
+  const formspreeEndpoint = "https://formspree.io/f/mgvggqbd"; // Replace with your Formspree form ID
 
   return (
     <section id="contact" className="bg-background">
