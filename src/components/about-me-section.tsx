@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 
@@ -14,18 +13,9 @@ export default function AboutMeSection() {
   return (
     <section id="about" className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-12 lg:grid-cols-5">
-          <div className="lg:col-span-2">
-            <Image
-              src="/profile.jpg"
-              alt="Akshaya Shri"
-              width={400}
-              height={400}
-              className="mx-auto aspect-square rounded-full object-cover shadow-lg glow"
-            />
-          </div>
-          <div className="flex flex-col justify-center lg:col-span-3">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">About Me</h2>
+        <div className="grid gap-12 lg:grid-cols-1">
+          <div className="flex flex-col justify-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary text-center lg:text-left">About Me</h2>
             <p className="mt-4 text-foreground/80">
               Full-Stack Developer with a passion for designing intuitive user experiences and developing scalable web and mobile applications. Experienced in modern frameworks and tools, with a current focus on Firebase-powered app development. Dedicated to continuous learning and delivering high-quality, efficient digital solutions.
             </p>
