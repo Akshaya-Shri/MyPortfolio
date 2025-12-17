@@ -93,7 +93,7 @@ export const education = [
       title: 'Higher Secondary Education (Class XII)',
       institution: 'Government Girls Higher Secondary School - Periyakulam',
       date: '2022 - 2023',
-      description: 'Completed higher secondary education with a focus on computer science, mathematics, and physics.'
+      description: 'Completed higher secondary education with 76%'
     },
     {
       title: 'Secondary Education (Class X)',
@@ -102,3 +102,4 @@ export const education = [
       description: 'Established a strong academic foundation with a broad curriculum.'
     }
   ];
+
