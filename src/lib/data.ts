@@ -86,16 +86,19 @@ export const education = [
     {
       title: 'B.E. in Computer Science and Engineering',
       institution: 'Nadar Saraswathi College of Engineering and Technology - Theni',
-      date: '2023 - 2027'
+      date: '2023 - 2027',
+      description: 'Pursuing a comprehensive degree in Computer Science with a focus on software development, algorithms, and data structures.'
     },
     {
       title: 'Higher Secondary Education (Class XII)',
       institution: 'Government Girls Higher Secondary School - Periyakulam',
-      date: '2022 - 2023'
+      date: '2022 - 2023',
+      description: 'Completed higher secondary education with a focus on computer science, mathematics, and physics.'
     },
     {
       title: 'Secondary Education (Class X)',
       institution: 'Government Girls Higher Secondary School - Periyakulam',
-      date: '2020 - 2021'
+      date: '2020 - 2021',
+      description: 'Established a strong academic foundation with a broad curriculum.'
     }
   ];
