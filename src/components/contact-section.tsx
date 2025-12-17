@@ -4,13 +4,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/Akshaya-Shri', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/akshaya-k-9a46772a3', label: 'LinkedIn' },
-  { icon: Phone, href: 'tel:9865139842', label: 'Phone' },
 ];
 
 export default function ContactSection() {
@@ -62,7 +61,6 @@ export default function ContactSection() {
                 </CardHeader>
                 <CardContent className="space-y-2">
                     <p><strong>Email:</strong> rkrkakshaya@gmail.com</p>
-                    <p><strong>Phone:</strong> 9865139842</p>
                     <p><strong>Location:</strong> Theni, Tamil Nadu</p>
                 </CardContent>
             </Card>
