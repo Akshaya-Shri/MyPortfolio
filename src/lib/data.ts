@@ -87,7 +87,7 @@ export const education = [
       title: 'B.E. in Computer Science and Engineering',
       institution: 'Nadar Saraswathi College of Engineering and Technology - Theni',
       date: '2023 - 2027',
-      description: 'Pursuing a comprehensive degree in Computer Science with a focus on software development, algorithms, and data structures.'
+      description: 'Pursuing a comprehensive degree in Computer Science'
     },
     {
       title: 'Higher Secondary Education (Class XII)',
