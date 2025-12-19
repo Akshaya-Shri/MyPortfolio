@@ -23,19 +23,23 @@ export default function SkillsSection() {
   const renderSkill = (skill: Skill) => {
     const isSelected = selectedSkill === skill.name;
 
+    const cardContent = (
+      <Card
+        onClick={() => handleSkillClick(skill.name)}
+        className="flex h-24 w-24 cursor-pointer items-center justify-center p-4 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 rounded-full"
+      >
+        <CardContent className="p-0 flex items-center justify-center">
+          <SkillIcon name={skill.name} className="h-12 w-12" />
+        </CardContent>
+      </Card>
+    );
+
     if (isMobile) {
       return (
         <div className="flex flex-col items-center gap-2 w-24">
-          <Card
-            onClick={() => handleSkillClick(skill.name)}
-            className="flex h-24 w-24 cursor-pointer items-center justify-center p-4 transition-transform duration-300 rounded-full"
-          >
-            <CardContent className="p-0 flex items-center justify-center">
-              <SkillIcon name={skill.name} className="h-12 w-12" />
-            </CardContent>
-          </Card>
+          {cardContent}
           <p className={cn("h-6 text-sm text-center transition-opacity duration-300", isSelected ? "opacity-100" : "opacity-0")}>
-            {skill.name}
+            {isSelected ? skill.name : ''}
           </p>
         </div>
       );
@@ -45,11 +49,7 @@ export default function SkillsSection() {
       <div className="flex flex-col items-center gap-2 w-24">
         <Tooltip>
           <TooltipTrigger asChild>
-            <Card className="flex h-24 w-24 cursor-pointer items-center justify-center p-4 transition-transform duration-300 hover:scale-110 hover:shadow-lg hover:shadow-primary/20 rounded-full">
-              <CardContent className="p-0 flex items-center justify-center">
-                <SkillIcon name={skill.name} className="h-12 w-12" />
-              </CardContent>
-            </Card>
+            {cardContent}
           </TooltipTrigger>
           <TooltipContent>
             <p>{skill.name}</p>
