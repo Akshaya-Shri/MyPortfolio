@@ -106,6 +106,9 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'move-gradient': 'move-gradient 15s ease infinite',
       },
+      maxWidth: {
+        '5xl': '64rem',
+      }
     },
   },
   plugins: [require('tailwindcss-animate')],
