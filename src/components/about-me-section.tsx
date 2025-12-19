@@ -14,15 +14,15 @@ export default function AboutMeSection() {
     <section id="about" className="bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-12 lg:grid-cols-1">
-          <div className="flex flex-col justify-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary text-center lg:text-left">About Me</h2>
-            <p className="mt-4 text-foreground/80">
+          <div className="flex flex-col justify-center items-center text-center">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">About Me</h2>
+            <p className="mt-4 max-w-3xl text-foreground/80">
               Full-Stack Developer with a passion for designing intuitive user experiences and developing scalable web and mobile applications. Experienced in modern frameworks and tools, with a current focus on Firebase-powered app development. Dedicated to continuous learning and delivering high-quality, efficient digital solutions.
             </p>
-            <p className="mt-4 text-foreground/80">
+            <p className="mt-4 max-w-3xl text-foreground/80">
               When I'm not coding, I enjoy exploring the latest tech trends, contributing to open-source projects, and hiking in the great outdoors.
             </p>
-            <Card className="mt-8 bg-card/50">
+            <Card className="mt-8 bg-card/50 w-full max-w-3xl text-left">
               <CardHeader>
                 <CardTitle>Key Strengths</CardTitle>
               </CardHeader>
