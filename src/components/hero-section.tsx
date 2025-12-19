@@ -14,7 +14,7 @@ export default function HeroSection() {
           AI-Powered App Engineer
         </p>
         <p className="mx-auto mt-6 max-w-[700px] text-foreground/80 md:text-xl">
-          A passionate Full-Stack Developer who loves crafting intuitive user experiences and building scalable web & mobile applications. Always exploring new technologies — currently focused on Firebase-powered app development
+          A dedicated Full-Stack Developer with a flair for creating intuitive, user-centric web and mobile applications. I thrive on learning and applying cutting-edge technologies, with a special focus on building scalable, Firebase-powered solutions.
         </p>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row">
           <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
