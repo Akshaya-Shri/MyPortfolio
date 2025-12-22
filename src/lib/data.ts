@@ -71,6 +71,13 @@ export const initialProjects = [
     githubUrl: 'https://github.com/Akshaya-Shri/studio',
     liveUrl: '#',
   },
+  {
+    title: 'Malicious Website Detector',
+    description: 'The web app that detects the fake and malicious websites',
+    techStack: 'html, css, javascript, java, spring boot, react',
+    githubUrl: 'https://github.com/Akshaya-Shri/Malicious-web-detector',
+    liveUrl: '#',
+  },
 ];
 
 export const internships = [
