@@ -74,7 +74,7 @@ export const initialProjects = [
   {
     title: 'Malicious Website Detector',
     description: 'An intelligent machine learning–based system for detecting malicious and phishing websites using static and dynamic analysis. It analyzes URLs, source code, and runtime behavior to provide real-time threat detection, access blocking, and user alerts.',
-    techStack: 'html, css, javascript, java, spring boot, react',
+    techStack: 'HTML, CSS, JavaScript, Spring Boot, React',
     githubUrl: 'https://github.com/Akshaya-Shri/Malicious-web-detector',
     liveUrl: '#',
   },
