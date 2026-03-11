@@ -34,10 +34,10 @@ export default function ExperienceSection() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline text-primary">
-            Internship
+            Experience
           </h2>
           <p className="mt-4 max-w-[700px] text-foreground/80 md:text-xl">
-            A timeline of my internship background.
+            A timeline of my professional experience and internships.
           </p>
         </div>
 
