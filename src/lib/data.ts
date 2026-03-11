@@ -80,7 +80,13 @@ export const initialProjects = [
   },
 ];
 
-export const internships = [
+export const experiences = [
+  {
+    title: 'Full-Stack Developer (MERN)',
+    company: 'College ERP Management Application',
+    date: '2024 - Present',
+    description: 'Currently working on college ERP system focusing on student module, faculty management, academics and timetable by using MERN stack.',
+  },
   {
     title: 'Web Development Intern',
     company: 'NearLook Mart Pvt Ltd. - Theni',

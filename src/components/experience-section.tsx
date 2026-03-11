@@ -1,4 +1,5 @@
-import { internships } from '@/lib/data';
+
+import { experiences } from '@/lib/data';
 import { Briefcase } from 'lucide-react';
 
 interface TimelineItemProps {
@@ -44,7 +45,7 @@ export default function ExperienceSection() {
         <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-16">
           <div>
             <div className="relative">
-              {internships.map((exp, index) => (
+              {experiences.map((exp, index) => (
                 <TimelineItem 
                   key={index}
                   icon={<Briefcase className="h-5 w-5" />}
@@ -52,7 +53,7 @@ export default function ExperienceSection() {
                   subtitle={exp.company}
                   date={exp.date}
                   description={exp.description}
-                  isLast={index === internships.length - 1}
+                  isLast={index === experiences.length - 1}
                 />
               ))}
             </div>
