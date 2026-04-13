@@ -44,6 +44,14 @@ export const skills: Skill[] = [
 
 export const initialProjects = [
   {
+    title: 'Hostel Website',
+    description: 'Created a responsive hostel website displaying key information and facilities. Designed for easy navigation and quick customer inquiries.',
+    techStack: 'HTML, CSS, JavaScript, Responsive Design',
+    githubUrl: 'https://github.com/Akshaya-Shri/Abirami-hostel-website',
+    liveUrl: 'https://sriabiramiwomenshostel.netlify.app',
+    badge: 'Freelance',
+  },
+  {
     title: 'ExpenseWise',
     description: 'ExpenseWise is an AI-powered expense tracking app to manage your finances with smart insights. The app provides intelligent expense categorization and detects unusual spending patterns to help you stay on top of your budget.',
     techStack: 'Next.js, React, ShadCN UI, Genkit',
